@@ -66,6 +66,41 @@ def west(x,y):
     else:
         return False
 
+def move_title_y(x, y, direction):
+    if direction == "n" or direction == "N":
+        if north(x,y) == True:
+            return y + 1
+        else:
+            print("Not a valid direction!")
+            return y
+    elif direction == "s" or direction == "S":
+        if south(x,y) == True:
+            return y-1
+        else:
+            print("Not a valid direction!")
+            return y
+    else:
+        return y
+
+def move_title_x(x, y, direction):
+    if direction == "e" or direction == "E":
+        if east(x, y) == True:
+            return x + 1
+        else:
+            print("Not a valid direction!")
+            return x
+    elif direction == "w" or direction == "W":
+        if west(x, y) == True:
+            return x-1
+        else:
+            print("Not a valid direction!")
+            return x
+    else:
+        return x
+            
+
+title_x = 1
+title_y = 1
 
 
 
