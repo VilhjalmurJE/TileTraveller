@@ -128,4 +128,5 @@ while True:
 
     if (title_x == 3) and (title_y == 1):
         print("Victory!")
+        break
 
