@@ -102,5 +102,30 @@ def move_title_x(x, y, direction):
 title_x = 1
 title_y = 1
 
+while True:
 
+    print("You can travel: ", end="")
+    if(north(title_x,title_y) == True):
+        print("(N)orth", end="")
+    if (east(title_x,title_y) == True):
+        if north(title_x,title_y) == True:
+            print(" or", end=" ")
+        print("(E)ast", end="")
+    if (south(title_x,title_y) == True):
+        if east(title_x,title_y) == True or north(title_x,title_y) == True:
+            print(" or", end=" ")
+        print("(S)outh", end="")
+    if (west(title_x,title_y) == True):
+        if south(title_x,title_y) == True or east(title_x,title_y) == True or north(title_x,title_y) == True:
+            print(" or", end=" ")
+        print("(W)est", end="")
+    print(".")
+
+    direction = input("Direction: ")
+
+    title_x = move_title_x(title_x,title_y, direction)
+    title_y = move_title_y(title_x,title_y, direction)
+
+    if (title_x == 3) and (title_y == 1):
+        print("Victory!")
 
