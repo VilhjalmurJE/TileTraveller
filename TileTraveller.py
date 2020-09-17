@@ -35,7 +35,37 @@ def east(x,y):
     else:
         return False
     
+def south(x,y):
+    if x == 1:
+        if y == 2 or y == 3:
+            return True
+        elif y == 1:
+            return False
+    if x == 2:
+        if y == 2:
+            return True
+        elif y == 1 or y == 3:
+            return False
+    if x == 3:
+        if y == 3 or y == 2:
+            return True
+        elif y == 1:
+            return False
 
-    
+def west(x,y):
+    if x == 2:
+        if y == 2 or y == 3:
+            return True
+        elif y == 1:
+            return False
+    if x == 3:
+        if y == 3:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 
 
